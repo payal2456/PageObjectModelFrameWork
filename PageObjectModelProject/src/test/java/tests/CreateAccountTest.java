@@ -29,7 +29,7 @@ public class CreateAccountTest extends TestBase {
 		
 	}
 	
-	//@BeforeMethod
+	@BeforeMethod
 	public void beforMethod() throws IOException {
 
 		openbrowser();
@@ -40,7 +40,7 @@ public class CreateAccountTest extends TestBase {
 							
 	}
 	
-	@Test
+	//@Test
 	public void test( ) throws NumberFormatException {
 		df= new DataFile();
 		DataFormatter dataformate = new DataFormatter();
@@ -48,7 +48,7 @@ public class CreateAccountTest extends TestBase {
 		System.out.println(df.BDY);
 	}
 	
-	//@Test(priority=1)
+	@Test(priority=1)
 	public void verifyTitleTest( ) {
 		
 		String Title=ca.verifyTitle();
@@ -64,7 +64,7 @@ public class CreateAccountTest extends TestBase {
 		return data;
 	}
 	
-	//@Test(priority=2 )
+	@Test(priority=2 )
 	public void CreateAccountSignUPTest ()throws InterruptedException {
 	
 		ca.CreateAnAccount(df.FN, df.LN, df.EMAIL, df.PASS, df.CONFPASS);//, df.POSTCODE, df.PH, df.PIN, df.CONFPIN, df.BDY);
@@ -76,7 +76,7 @@ public class CreateAccountTest extends TestBase {
 		
 	}
 	
-	//@Test(priority= 3)
+	@Test(priority= 3)
 	
 	public void CreateAccountAlreadyMemberTest ()throws InterruptedException {
 		
@@ -90,7 +90,7 @@ public class CreateAccountTest extends TestBase {
 	}
 	
 	
-	//@AfterMethod
+	@AfterMethod
 		public void afterMethod() {
 					closeBrowser();
 			 }

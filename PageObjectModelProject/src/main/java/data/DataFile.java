@@ -3,7 +3,7 @@ package data;
 import utility.Xls_Reader;
 
 public class DataFile extends NumberFormat {
-		Xls_Reader d = new Xls_Reader("D:\\QA\\Testing\\TheBayTestData.xlsx");
+		Xls_Reader d = new Xls_Reader("D:\\QA\\Selenium_Workspace\\PageObjectModelProject\\src\\main\\java\\configuration\\TheBayTestData.xlsx");
 		public String FN = d.getCellData("data1","first name",2);
 		public String LN = d.getCellData("data1","last name",2);
 		public String EMAIL= d.getCellData("data1","email",2);

@@ -21,7 +21,7 @@ public class TestBase {
  	
  			public void openbrowser() throws IOException {
  				
- 				FileInputStream f = new FileInputStream("D:\\QA\\Testing\\TheBayProp.properties");
+ 				FileInputStream f = new FileInputStream("D:\\QA\\Selenium_Workspace\\PageObjectModelProject\\src\\main\\java\\configuration\\TheBayProp.properties");
  				Properties prop = new Properties();
  				prop.load(f);
  				String browser = prop.getProperty("browser");

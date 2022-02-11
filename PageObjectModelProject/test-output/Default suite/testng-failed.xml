@@ -5,7 +5,11 @@
     <classes>
       <class name="tests.CreateAccountTest">
         <methods>
-          <include name="test"/>
+          <include name="afterMethod"/>
+          <include name="beforMethod"/>
+          <include name="CreateAccountSignUPTest"/>
+          <include name="CreateAccountAlreadyMemberTest"/>
+          <include name="verifyTitleTest"/>
         </methods>
       </class> <!-- tests.CreateAccountTest -->
     </classes>
