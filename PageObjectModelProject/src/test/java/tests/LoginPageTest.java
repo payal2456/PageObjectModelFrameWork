@@ -1,5 +1,4 @@
 package tests;
-
 import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -10,17 +9,17 @@ import pages.LoginPage;
 
 public class LoginPageTest extends TestBase {
 
-		LoginPage lp = new LoginPage();
+		LoginPage lp;
 
 		public LoginPageTest() {
 		super();
 	}
-
 		@BeforeMethod
 		public void beforMethod() throws IOException {
 
 		openbrowser();
-	
+		lp= new LoginPage();
+		
 		}
 		
 		@Test(priority=1)
@@ -40,7 +39,7 @@ public class LoginPageTest extends TestBase {
 		
 		@Test(priority=3)
 		public void createAccountTest() {
-			lp.createAccount();
+			lp.createAccountButton();
 		}
 		
 		

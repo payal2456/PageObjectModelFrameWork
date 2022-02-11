@@ -21,7 +21,7 @@ public class LoginPage extends TestBase {
 	@FindBy(id="checkSoftLogout")
 	public WebElement CreateAccount;
 
-	//@FindBy(linkText="CREATE AN ACCOUNT")
+	@FindBy(linkText="CREATE AN ACCOUNT")
 	public WebElement CreateAnAccount;
 
 	public LoginPage() {
@@ -38,17 +38,18 @@ public class LoginPage extends TestBase {
 		account.moveToElement(New).build().perform();
 		Thread.sleep(2000);
 		List<WebElement> list = driver.findElements(By.xpath("//li[@data-adobelaunchsubcategory='New & Now']//li"));
-		System.out.println(list.size());
-		
-		for(int i=0; i<list.size(); i++) {
-			System.out.println(list.get(i).getText());
+		int NumOfList= list.size();
+		System.out.println(NumOfList);
+		for(int i=0; i<NumOfList; i++) {
+		System.out.println(list.get(i).getText());
 	}
 		
 		}
 
-		public CreateAnAccount createAccount () {
+		public CreateAnAccount createAccountButton () {
 			WebElement SignIn = driver.findElement(By.id("checkSoftLogout"));
 			account.moveToElement(SignIn).build().perform();
+			CreateAnAccount.click();
 
 			return new CreateAnAccount();
 
